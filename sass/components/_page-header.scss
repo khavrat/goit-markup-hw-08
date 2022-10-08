@@ -1,0 +1,113 @@
+.header {
+    border-bottom: 1px solid $border-line;
+}
+
+.container--nav {
+    @include centeredFlex;
+    min-height: 60px;
+
+    @media screen and (min-width: $tablet) {
+        min-height: 80px;
+    }
+}
+
+@import "../components/logo";
+
+.menu__toggle {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent; 
+    margin-left: auto;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.site-nav {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        @include centeredFlex();
+        margin-left: 87px; 
+    }
+
+    &__list {
+        @include centeredFlex();
+        gap: 50px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 92px;
+    }
+} 
+
+.site-nav__link {
+    @extend %headerLink;
+    padding: 32px 0;
+    color: $prymary-text-color;
+    @include transitionItem(color, fill);
+    
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+
+    &.current::after {
+        @extend %pseudoElement;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: $accent-color;
+        border-radius: 2px;
+        transform: translateY(1px);
+    }
+}
+
+.current {
+    position: relative;
+    color: $accent-color;
+}
+
+.contacts {
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include centeredFlex;
+        gap: 30px;
+        margin-left: auto;
+    }
+
+    &__icon {
+        color: currentColor;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+}
+
+.contacts__link {
+    @extend %headerLink;
+    padding: 5px 0;
+    fill: $secondary-text-color;
+    color: $secondary-text-color;
+    @include transitionItem(color, fill);
+
+
+    &:hover, &:focus {
+        fill: $accent-color;
+        color: $accent-color;
+    }
+}

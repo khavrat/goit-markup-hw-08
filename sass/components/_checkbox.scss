@@ -1,0 +1,58 @@
+.checkbox {
+    appearance: none;
+    outline: none;
+}
+
+.checkbox__label {
+    position: relative;
+    margin-bottom: 30px;
+    @include centeredFlex($type: inline-flex);
+    font-size: $font-size-xs;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+}
+
+.checkbox__link {
+    font-size: $font-size-xs;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: $accent-color;
+}
+
+.checkbox__icon svg {
+    visibility: hidden;
+    @include centeredFlex();
+    position: absolute;
+    top: 3px;
+    left: -13px;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    background-color: $accent-color;
+    background-size: cover;
+
+    .checkbox:checked + & {
+        visibility: visible;
+    }
+}
+
+.checkbox__icon {
+    margin-top: -4px;
+    margin-left: -13px;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $prymary-text-color;
+    border-radius: 2px;
+    background-color: $primary-bg-color;
+
+    .checkbox:focus + & {
+        outline: 2px solid $accent-color;
+    }
+
+    .checkbox:checked + & {
+        outline: none;
+    }
+}

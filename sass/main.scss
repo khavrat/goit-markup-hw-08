@@ -1,0 +1,125 @@
+@import "./utils/variables";
+@import "./utils/totalstyles";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+@import "./utils/breakpoints";
+
+.container {
+    @extend %containerStyle;
+
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }    
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
+}
+
+
+@import "./components/page-header";
+
+
+
+
+
+
+// Мобільне меню
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-width: 370px;
+    height: 100vh;
+    padding: 48px 0 48px 40px;
+    background-color: $primary-bg-color;
+}
+
+.menu .menu__toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.menu-nav__link {
+    font-weight: $font-weight-normal;
+    font-size: $font-size-mobmenu;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $prymary-text-color;
+    @include transitionItem(color, fill);
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}
+
+.menu-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+
+.menu .current {
+    color: $accent-color;
+}
+
+.menu-position__wrapper {
+    margin-top: 30vh;
+}
+
+.menu-contacts__item:first-child {
+    margin-bottom: 32px;
+}
+
+.menu-contacts__item:last-child {
+    margin-bottom: 64px;
+}
+
+.menu-contacts__link {
+    @include transitionItem(color);
+    font-weight: $font-weight-normal;
+    font-size: $font-size-mobcontact;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+
+    &--mail {
+        font-size: $font-size-mobmail;
+        line-height: 1.17;
+        color: $secondary-text-color;
+    }
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}
+
+.menu-network__list {
+    display: flex;
+}
+
+.menu-network__item {
+    padding-right: 10px;
+
+    &:not(:first-child) {
+        padding-left: 10px;
+    }
+
+    &:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    } 
+}
+
+.menu-network__link {
+    font-weight: $font-weight-normal;
+    font-size: $font-size-m;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+}

@@ -1,0 +1,33 @@
+.icon__list {
+    @include centeredFlex();
+    gap: 10px;
+}
+
+.icon__network {
+    @include centeredFlex(); 
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;  
+    fill: $icon-color;
+    @include transitionItem(background-color, fill);
+
+
+    &:hover, &:focus {
+        background-color: $accent-color;
+        fill: $primary-bg-color;
+    }
+
+    &--footer {
+        @include centeredFlex();
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;  
+        fill: $primary-bg-color;
+        background-color: rgba(255, 255, 255, 0.1);
+        @include transitionItem(background-color);
+    }
+
+    &--footer:hover, &--footer:focus {
+        background-color: $accent-color;
+    }
+}

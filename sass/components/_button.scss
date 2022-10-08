@@ -1,0 +1,82 @@
+// Кнопка в секції Hero
+.button {
+    @extend %buttonStyles;
+    padding: 10px 32px;
+    border-radius: 4px;
+    color: $primary-bg-color;
+    @include transitionItem(background-color);
+   
+    &:hover, &:focus {
+        background-color: $button-hover-color;
+    }
+}
+
+// Кнопка у футері
+.button--pic {
+    @extend %buttonStyles;
+    @include centeredFlex();
+    text-align: center;
+    padding: 10px 28px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    @include transitionItem(background-color);
+    
+    &::after {
+        content: " ";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+        background-image: url(../images/send.svg);
+    }
+
+    
+    &:hover, &:focus {
+        background-color: $button-hover-color;
+    }
+}
+
+// Фільтр на сторінці portfolio.html
+.project__filter {
+    @include centeredFlex();
+    margin-bottom: 50px;
+    gap: 8px;
+}
+
+.button--select {
+    padding: 6px 22px;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-s;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    color: $prymary-text-color;
+    background: $secondary-bg-color;
+    box-shadow: none;
+    @include transitionItem(color, background-color, box-shadow);
+
+
+    &:hover, &:focus {
+        color: $primary-bg-color;
+        background-color: $accent-color;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+            0px 1px 2px rgba(0, 0, 0, 0.08), 
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+
+// Кнопка в модальному вікні
+.button--send {
+    @extend %buttonStyles;
+    padding: 10px 52px;
+    font-family: $font-family-primary;
+    @include centeredFlex($type: inline-block);
+    text-align: center;
+    @include transitionItem(background-color);
+
+    &:hover, &:focus {
+        background-color: $button-hover-color;
+    }
+}

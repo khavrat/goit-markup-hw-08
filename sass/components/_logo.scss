@@ -1,0 +1,20 @@
+.logo {
+    font-family: $font-family-accent;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xl;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $logo-accent;
+    
+    &--header {
+        padding: 16px 0;
+    }
+
+    &--footer {
+        color: $primary-bg-color;
+    }
+    
+    &__part {
+        color: $accent-color;
+    }
+}
