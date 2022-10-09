@@ -110,4 +110,8 @@
         fill: $accent-color;
         color: $accent-color;
     }
+
+    @media screen and (min-width: $desktop) {
+        padding: 32px 0;
+    }
 }

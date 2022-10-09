@@ -237,6 +237,11 @@ button {
   fill: #2196F3;
   color: #2196F3;
 }
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    padding: 32px 0;
+  }
+}
 
 .menu {
   position: fixed;
@@ -279,7 +284,7 @@ button {
 }
 
 .menu-position__wrapper {
-  margin-top: 30vh;
+  margin-top: 20vh;
 }
 
 .menu-contacts__item:first-child {
