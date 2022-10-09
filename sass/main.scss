@@ -35,10 +35,18 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 796px;
     padding: 48px 0 48px 40px;
     background-color: $primary-bg-color;
+    transform: translateX(100%);
+    @include transitionItem(transform);
 }
+
+.menu.is-open {
+    transform: translateX(0);
+}
+
 
 .menu .menu__toggle {
     position: absolute;
@@ -60,7 +68,7 @@
 }
 
 .menu-nav__item:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 3vh;
 }
 
 
@@ -69,15 +77,15 @@
 }
 
 .menu-position__wrapper {
-    margin-top: 20vh;
+    margin-top: 25vh;
 }
 
 .menu-contacts__item:first-child {
-    margin-bottom: 32px;
+    margin-bottom: 3vh;
 }
 
 .menu-contacts__item:last-child {
-    margin-bottom: 64px;
+    margin-bottom: 8vh;
 }
 
 .menu-contacts__link {
@@ -101,6 +109,7 @@
 
 .menu-network__list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .menu-network__item {

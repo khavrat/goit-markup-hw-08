@@ -248,9 +248,23 @@ button {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 796px;
   padding: 48px 0 48px 40px;
   background-color: #FFFFFF;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.menu.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .menu .menu__toggle {
@@ -275,7 +289,7 @@ button {
 }
 
 .menu-nav__item:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 3vh;
 }
 
 .menu .current {
@@ -283,15 +297,15 @@ button {
 }
 
 .menu-position__wrapper {
-  margin-top: 20vh;
+  margin-top: 25vh;
 }
 
 .menu-contacts__item:first-child {
-  margin-bottom: 32px;
+  margin-bottom: 3vh;
 }
 
 .menu-contacts__item:last-child {
-  margin-bottom: 64px;
+  margin-bottom: 8vh;
 }
 
 .menu-contacts__link {
@@ -318,6 +332,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .menu-network__item {
