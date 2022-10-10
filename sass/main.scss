@@ -56,11 +56,15 @@
 
 .menu-nav__link {
     font-weight: $font-weight-normal;
-    font-size: $font-size-mobmenu;
+    font-size: $font-size-xxl;
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: $prymary-text-color;
     @include transitionItem(color, fill);
+
+    @media screen and (min-width: 375px) {
+        font-size: $font-size-mobmenu;
+    }
 
     &:hover, &:focus {
         color: $accent-color;
@@ -91,10 +95,14 @@
 .menu-contacts__link {
     @include transitionItem(color);
     font-weight: $font-weight-normal;
-    font-size: $font-size-mobcontact;
+    font-size: $font-size-minimob;
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: $accent-color;
+
+    @media screen and (min-width: 375px) {
+        font-size: $font-size-mobcontact;
+    }
 
     &--mail {
         font-size: $font-size-mobmail;
@@ -109,25 +117,44 @@
 
 .menu-network__list {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .menu-network__item {
-    padding-right: 10px;
+    padding-right: 8px;
 
     &:not(:first-child) {
-        padding-left: 10px;
+        padding-left: 8px;
     }
 
     &:not(:last-child) {
         border-right: 1px solid rgba(33, 33, 33, 0.2);
     } 
+
+    @media screen and (min-width: 414px) {
+        padding-right: 10px;
+
+        &:not(:first-child) {
+            padding-left: 10px;
+        }
+    }
 }
 
 .menu-network__link {
     font-weight: $font-weight-normal;
-    font-size: $font-size-m;
+    font-size: 13px;
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: $accent-color;
+
+    @media screen and (min-width: 350px) {
+        font-size: $font-size-xs;
+    }
+
+    @media screen and (min-width: 375px) {
+        font-size: $font-size-s;
+    }
+
+    @media screen and (min-width: 414px) {
+        font-size: $font-size-m;
+    }
 }
