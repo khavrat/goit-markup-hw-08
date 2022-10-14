@@ -1,7 +1,15 @@
 .address {
     margin-top: 20px;
 
+    @media screen and (max-width: $desktop) {
+        text-align: center;  
+    }
+
     &__item:not(:first-child) {
+        margin-top: 8px;
+    }
+
+    @media screen and (min-width: $desktop) {
         margin-top: 9px;
     }
 

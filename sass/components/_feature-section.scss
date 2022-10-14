@@ -1,8 +1,12 @@
 .section {
-    @extend %sectionPlace;
+    @extend %sectionPlaceMin;
 
-    &--feature {
-        padding-bottom: calc(94px / 2);
+    @media screen and (min-width: $desktop) {
+        padding: 94px 0;
+
+        &--feature {
+            padding-bottom: calc(94px / 2);
+        }
     }
 }
 
@@ -16,21 +20,46 @@
     overflow: hidden;
 }
 
-.feature__list {
-    @include centeredFlex($items: baseline);
-    gap: 30px;
+.feature__item {
+    margin-bottom: 30px;
 }
 
-.feature__item {
-    flex-basis: calc((100% - 90px)/4);
+@media screen and (min-width: $tablet) {
+    .feature__list {
+        @include centeredFlex($items: baseline);
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .feature__item {
+        flex-basis: calc((100% - 30px)/2);
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .feature__list {
+        flex-wrap: nowrap;
+    }
+
+    .feature__item {
+        flex-basis: calc((100% - 90px)/4);
+    }
 }
 
 .feature__icon {
     @include centeredFlex();
-    width: 270px;
+    max-width: 450px;
     height: 120px;
     background-color: $secondary-bg-color;
     border-radius: 4px;
+
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+    }
 }
 
 .feature__content {

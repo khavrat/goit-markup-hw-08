@@ -4,34 +4,60 @@
 }
 
 .checkbox__label {
-    position: relative;
-    margin-bottom: 30px;
+    position: absolute;
+    top: 455px;
+    left: 30px;
+    width: 370px;
     @include centeredFlex($type: inline-flex);
-    font-size: $font-size-xs;
-    line-height: 1.71;
+    font-size: $font-size-xxxs;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $secondary-text-color;
+
+    @media screen and (min-width: $desktop) {
+        font-size: $font-size-xs;
+        line-height: 1.71; 
+        top: 430px;
+        width: 448px;
+    }
 }
 
 .checkbox__link {
-    font-size: $font-size-xs;
-    line-height: 1.71;
+    display: inline-block;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: $accent-color;
+
+    @media screen and (max-width: 1199px) {
+        font-size: 11px;
+        line-height: 1.17;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: $font-size-xs;
+        line-height: 1.71; 
+    }
 }
 
 .checkbox__icon svg {
     visibility: hidden;
     @include centeredFlex();
     position: absolute;
-    top: 3px;
-    left: -13px;
     width: 16px;
     height: 15px;
     border-radius: 2px;
     background-color: $accent-color;
     background-size: cover;
+
+    @media screen and (max-width: 1199px) {
+        top: -2px;
+        left: 18px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        top: 3px;
+        left: 16px;
+    }
 
     .checkbox:checked + & {
         visibility: visible;
@@ -39,14 +65,14 @@
 }
 
 .checkbox__icon {
-    margin-top: -4px;
-    margin-left: -13px;
-    margin-right: 7px;
     width: 16px;
     height: 15px;
     border: 2px solid $prymary-text-color;
     border-radius: 2px;
     background-color: $primary-bg-color;
+    margin-top: -2px;
+    margin-left: -13px;
+    margin-right: 7px;
 
     .checkbox:focus + & {
         outline: 2px solid $accent-color;

@@ -2,19 +2,37 @@
     padding: 60px 0;
     background-color: $footer-bg-color;
 
-    &__content {
-        @include centeredFlex($items: baseline);
+    @media screen and (min-width: $tablet) {
+        &__wrapper {
+            @include centeredFlex($items: baseline);
+        }
     }
 
-    &__location {
-        width: 231px;
-    }
+    @media screen and (min-width: $desktop) {
+        &__content {
+            @include centeredFlex($items: baseline);
+        }
+    
+        &__location {
+            width: 231px;
+        }
+    } 
 }
 
 .action {
-    margin-left: 70px;
-    margin-right: 93px;
+    @media screen and (min-width: $tablet) {
+        margin-left: 165px;
+    }
 
+    @media screen and (max-width: $desktop) {
+        margin-top: 60px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        margin-left: 70px;
+        margin-right: 93px;
+    }
+    
     &__title {
         display: block;
         margin-bottom: 20px;
@@ -23,8 +41,13 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: $primary-bg-color;
+
+        @media screen and (max-width: $desktop) {
+            text-align: center;
+        }
     }
 } 
+
 
 @import "../components/address";
 @import "../components/icon-set";

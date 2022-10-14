@@ -56,7 +56,7 @@
     <main>
         <!--Герой-->
         <section class="section section--hero overlay">
-            <div class="conteiner">
+            <div class="container">
                 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
                 <button class="button" type="button" data-modal-open>Замовити послугу</button>
             </div>
@@ -121,19 +121,31 @@
                 <ul class="work__list">
                     <li class="work__item">
                         <div class="work__thumb">
-                            <img src="./images/desktop.jpg" alt="Екран компьютера" width="370">
+                            <img 
+                                srcset="./images/desktop-370.jpg 370w,
+                                        ./images/desktop-740.jpg 740w"
+                                src="./images/desktop-370.jpg" 
+                                alt="Екран компьютера">
                             <p class="work__about">Десктопні додатки</p>
                         </div>   
                     </li>
                     <li class="work__item">
                         <div class="work__thumb">
-                            <img src="./images/mobilescreen.jpg" alt="Екрани мобільних телефонів" width="370">
+                            <img
+                                srcset="././images/mobilescreen-370.jpg 370w,
+                                        ./images/mobilescreen-740.jpg 740w" 
+                                src="./images/mobilescreen-370.jpg 370w" 
+                                alt="Екрани мобільних телефонів">
                             <p class="work__about">Мобільні додатки</p>
                         </div>
                     </li>
                     <li class="work__item">
                         <div class="work__thumb">
-                            <img src="./images/colorscreen.jpg" alt="Палітра кольорів на екрані" width="370">
+                            <img 
+                                srcset="./images/colorscreen-370.jpg 370w,
+                                        ./images/colorscreen-740.jpg 740w"
+                                src="./images/colorscreen-370.jpg" 
+                                alt="Палітра кольорів на екрані">
                             <p class="work__about">Дизайнерські рішення</p>
                         </div>
                     </li>
@@ -146,7 +158,19 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img src="./images/photo1.jpg" alt="Фото дизайнера продукту Ігоря Дем'яненка" width="270">
+                        <img class="team__img"
+                            srcset="./images/prodesigner-270.jpg 270w,
+                                    ./images/prodesigner-540.jpg 540w,
+                                    ./images/prodesigner-354.jpg 354w,
+                                    ./images/prodesigner-708.jpg 708w,
+                                    ./images/prodesigner-450.jpg 450w,
+                                    ./images/prodesigner-900.jpg 900w"
+                            src="./images/prodesigner-270.jpg " 
+                            alt="Фото дизайнера продукту Ігоря Дем'яненка"
+                            size="(min-width: 1200px) 270px,
+                                  (min-width: 768px) 354px,
+                                  (min-width: 480px) 450px,
+                                  100vw">
                         <div class="team__wrapper">
                             <h3 class="team__name">Ігор Дем'яненко</h3>
                             <p class="team__position" lang="en">Product Designer</p>
@@ -183,8 +207,20 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/photo2.jpg" alt="Фото фронтенд розробника Ольги Рєпіної " width="270">
-                        <div class="team__wrapper">
+                        <img class="team__img"
+                        srcset="./images/frontend-270.jpg 270w,
+                                ./images/frontend-540.jpg 540w,
+                                ./images/frontend-354.jpg 354w,
+                                ./images/frontend-708.jpg 708w,
+                                ./images/frontend-450.jpg 450w,
+                                ./images/frontend-900.jpg 900w"
+                        src="./images/frontend-270.jpg " 
+                        alt="Фото фронтенд розробника Ольги Рєпіної"
+                        size="(min-width: 1200px) 270px,
+                              (min-width: 768px) 354px,
+                              (min-width: 480px) 450px,
+                              100vw">                        
+                            <div class="team__wrapper">
                             <h3 class="team__name">Ольга Рєпіна</h3>
                             <p class="team__position" lang="en">Frontend Developer</p>
                             <ul class="icon__list">
@@ -220,8 +256,20 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/photo3.jpg" alt="Фото спеціаліста з маркетингу Миколи Тарасова" width="270">
-                        <div class="team__wrapper">
+                        <img class="team__img"
+                        srcset="./images/marketing-270.jpg 270w,
+                                ./images/marketing-540.jpg 540w,
+                                ./images/marketing-354.jpg 354w,
+                                ./images/marketing-708.jpg 708w,
+                                ./images/marketing-450.jpg 450w,
+                                ./images/marketing-900.jpg 900w"
+                        src="./images/marketing-270.jpg " 
+                        alt="Фото спеціаліста з маркетингу Миколи Тарасова"
+                        size="(min-width: 1200px) 270px,
+                              (min-width: 768px) 354px,
+                              (min-width: 480px) 450px,
+                              100vw">
+                            <div class="team__wrapper">
                             <h3 class="team__name">Микола Тарасов</h3>
                             <p class="team__position" lang="en">Marketing</p>
                             <ul class="icon__list">
@@ -257,7 +305,19 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/photo4.jpg" alt="Фото дизайнера інтерфейсів Михайла Єрмака" width="270">
+                        <img class="team__img"
+                        srcset="./images/uidesigner-270.jpg 270w,
+                                ./images/uidesigner-540.jpg 540w,
+                                ./images/uidesigner-354.jpg 354w,
+                                ./images/uidesigner-708.jpg 708w,
+                                ./images/uidesigner-450.jpg 450w,
+                                ./images/uidesigner-900.jpg 900w"
+                        src="./images/uidesigner-270.jpg " 
+                        alt="Фото дизайнера інтерфейсів Михайла Єрмакова"
+                        size="(min-width: 1200px) 270px,
+                              (min-width: 768px) 354px,
+                              (min-width: 480px) 450px,
+                              100vw">
                         <div class="team__wrapper">
                             <h3 class="team__name">Михайло Єрмаков</h3>
                             <p class="team__position" lang="en">UI Designer</p>
@@ -351,58 +411,60 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
-                <div class="footer__location">
-                    <!--Логотип-->
-                    <a class="logo logo--footer" href="./index.html"><span class="logo__part">Web</span>Studio</a>
-                    <!--Адреса та контакти-->
-                    <address class="address">
-                    <ul class="address__list">
-                        <li class="address__item">
-                            <a class="address__map" href="https://goo.gl/maps/7AguyPVc6TsrLXyr5" target="_blank"
-                                rel="noopener nofollow noreferrer">м. Київ, пр-т Лесі Українки, 26</a>
-                        </li>
-                        <li class="address__item">
-                            <a class="address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                        </li>
-                        <li class="address__item">
-                            <a class="address__contact" href="tel:+380961111111">+38 096 111 11 11</a>
-                        </li>
-                    </ul>
-                    </address> 
+                <div class="footer__wrapper">
+                    <div class="footer__location">
+                        <!--Логотип-->
+                        <a class="logo logo--footer" href="./index.html"><span class="logo__part">Web</span>Studio</a>
+                        <!--Адреса та контакти-->
+                        <address class="address">
+                        <ul class="address__list">
+                            <li class="address__item">
+                                <a class="address__map" href="https://goo.gl/maps/7AguyPVc6TsrLXyr5" target="_blank"
+                                    rel="noopener nofollow noreferrer">м. Київ, пр-т Лесі Українки, 26</a>
+                            </li>
+                            <li class="address__item">
+                                <a class="address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                            <li class="address__item">
+                                <a class="address__contact" href="tel:+380961111111">+38 096 111 11 11</a>
+                            </li>
+                        </ul>
+                        </address> 
+                    </div>
+                    <div class="action">
+                        <b class="action__title">приєднуйтесь</b>
+                        <ul class="icon__list">
+                            <li>
+                                <a class="icon__network icon__network--footer" href="#" target="_blank" rel="noopener nofollow noreferrer" aria-label="Інстаграм">
+                                    <svg width="20px" height="20px">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon__network icon__network--footer" href="#" target="_blank" rel="noopener nofollow noreferrer" aria-label="Твітер">
+                                    <svg width="20px" height="20px">
+                                        <use href="./images/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon__network icon__network--footer" href="#" target="_blank" rel="noopener nofollow noreferrer" aria-label="Фейсбук">
+                                    <svg width="20px" height="20px">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon__network icon__network--footer" href="#" target="_blank" rel="noopener nofollow noreferrer" aria-label="Лінкедін">
+                                    <svg width="20px" height="20px">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> 
                 </div>
-                <div class="action">
-                    <b class="action__title">приєднуйтесь</b>
-                    <ul class="icon__list">
-                        <li>
-                            <a class="icon__network icon__network--footer" href="#" target="_blank" rel="noopener nofollow noreferrer" aria-label="Інстаграм">
-                                <svg width="20px" height="20px">
-                                    <use href="./images/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon__network icon__network--footer" href="#" target="_blank" rel="noopener nofollow noreferrer" aria-label="Твітер">
-                                <svg width="20px" height="20px">
-                                    <use href="./images/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon__network icon__network--footer" href="#" target="_blank" rel="noopener nofollow noreferrer" aria-label="Фейсбук">
-                                <svg width="20px" height="20px">
-                                    <use href="./images/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon__network icon__network--footer" href="#" target="_blank" rel="noopener nofollow noreferrer" aria-label="Лінкедін">
-                                <svg width="20px" height="20px">
-                                    <use href="./images/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div> 
                 <div>
                     <form class="form">
                         <label class="form__label" for="mail">Підпишіться на розсилку</label>

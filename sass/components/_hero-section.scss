@@ -1,33 +1,83 @@
-.section {
-    @extend %sectionPlace;
+.section.section--hero {
+    padding: 118px 0;
+    text-align: center;
 
-    &--hero {
-        padding: 200px 0;
-        text-align: center;
+    @media screen and (min-width: $desktop) {
+        & {
+            padding: 200px 0;
+        }
     }
 }
 
 .overlay {
-    max-width: 1600px;
-    height: 600px;
+    max-width: 480px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color: $hero-bg-color;
     background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
-        url(../images/heroimg.jpg);
+        url(../images/heroimgmin.jpg);
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        & {
+            background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
+            url(../images/heroimgmin@2x.jpg);
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        max-width: 768px;
+        height: 400px;
+        background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
+        url(../images/heroimgmid.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        & {
+            background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
+            url(../images/heroimgmid@2x.jpg);
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 1600px;
+        height: 600px;
+        background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
+        url(../images/heroimglg.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        & {
+            background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
+            url(../images/heroimglg@2x.jpg);
+        }
+    }
 }
 
 .hero__title {
-    width: 696px;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
     font-weight: $font-weight-extra;
-    font-size: $font-size-xxxl;
-    line-height: 1.36;
+    font-size: $font-size-xl;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $primary-bg-color;
+
+    @media screen and (min-width: $desktop) {
+        max-width: 696px;
+        font-size: $font-size-xxxl;
+        line-height: 1.36;
+    }
 }
 
-@import "./button";
+@import "../components/button";

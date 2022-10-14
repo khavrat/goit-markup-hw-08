@@ -1,12 +1,24 @@
-.section {
+.section--work {
+    display: none;
+}
 
-    &--work {
+@media screen and (min-width: $desktop) {
+    .section--work{
+        display: block;
         padding-top: calc(94px/2);
     }
 }
 
 .work__title {
     @extend %sectionTitle;
+}
+
+@media screen and (min-width: $desktop) {
+    .work__title {
+        margin-bottom: 50px;
+        font-size: $font-size-xxl;
+        line-height: 1.17;
+    }
 }
 
 .work__list {

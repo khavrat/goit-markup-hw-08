@@ -9,6 +9,14 @@
     @extend %sectionTitle;
 }
 
+@media screen and (min-width: $desktop) {
+    .team__title {
+        margin-bottom: 50px;
+        font-size: $font-size-xxl;
+        line-height: 1.17;
+    }
+}
+
 .team__list {
     @include centeredFlex();
     flex-wrap: wrap;
@@ -22,6 +30,21 @@
         0px 1px 1px rgba(0, 0, 0, 0.14), 
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+}
+
+.team__img {
+    width: 450px;
+    max-height: 460px;
+
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+        height: 374px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+        height: 260px;
+    }
 }
 
 .team__wrapper {
