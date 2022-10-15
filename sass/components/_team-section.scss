@@ -7,10 +7,8 @@
 
 .team__title {
     @extend %sectionTitle;
-}
 
-@media screen and (min-width: $desktop) {
-    .team__title {
+    @media screen and (min-width: $desktop) {
         margin-bottom: 50px;
         font-size: $font-size-xxl;
         line-height: 1.17;
@@ -20,7 +18,10 @@
 .team__list {
     @include centeredFlex();
     flex-wrap: wrap;
-    gap: 30px;
+
+    @media screen and (min-width: $tablet) {
+        gap: 30px;
+    }
 }
 
 .team__item {
@@ -30,6 +31,12 @@
         0px 1px 1px rgba(0, 0, 0, 0.14), 
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @media screen and (max-width: $pretablet) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .team__img {

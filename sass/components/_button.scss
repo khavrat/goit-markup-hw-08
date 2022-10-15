@@ -53,9 +53,30 @@
 // Фільтр на сторінці portfolio.html
 .project__filter {
     @include centeredFlex();
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     gap: 8px;
+    justify-content: left;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $pre-mobile) {
+        width: 250px;
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: $pretablet) {
+        width: 330px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
 }
+
 
 .button--select {
     padding: 6px 22px;

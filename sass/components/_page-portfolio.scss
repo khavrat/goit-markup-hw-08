@@ -1,12 +1,29 @@
 .project__portfolio {
-    @include centeredFlex();
-    flex-wrap: wrap;
-    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media screen and (min-width: $tablet) {
+        @include centeredFlex();
+        justify-content: left;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+.project__item {
+
+    @media screen and (max-width: $pretablet) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .project__thumb {
     position: relative;
     overflow: hidden;
+   
 
     &::before {
         @extend %pseudoElement;
@@ -33,7 +50,6 @@
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: $primary-bg-color;
-    padding: 63px 24px;
     opacity: 0;
     transform: translateY(100%);  
     @include transitionItem(opacity, transform); 
@@ -42,6 +58,36 @@
     .project__link:focus & {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    @media screen and (max-width: $premobile) {
+        padding: 20px 10px;
+        font-size: $font-size-s;
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: $pretablet) {
+        padding: 73px 24px 10px 24px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+        padding: 49px 24px 10px 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 63px 24px 10px 24px;
+    }
+}
+
+.project__img {
+    width: 450px;
+    max-height: 294px;
+    
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 370px;
     }
 }
 
@@ -63,12 +109,22 @@
     border-left: 1px solid $border-line-portfolio;
 } 
 
+.project__item:first-child .project__wrapper {
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        height: 146px;
+    } 
+}
+
 .project__name {
     margin-bottom: 4px;
     font-size: $font-size-m;
     line-height: 2;
     letter-spacing: 0.06em;
     color: $prymary-text-color;
+
+    @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+        width: 300px;
+    }
 }
 
 .project__type {

@@ -3,8 +3,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    min-height: 100vh;
-    max-height: 796px;
+    height: 100vh;
     padding: 48px 0 48px 40px;
     background-color: $primary-bg-color;
     transform: translateX(100%);
@@ -14,7 +13,6 @@
 .menu.is-open {
     transform: translateX(0);
 }
-
 
 .menu .menu__toggle {
     position: absolute;
@@ -41,8 +39,11 @@
 
 .menu-nav__item:not(:last-child) {
     margin-bottom: 3vh;
-}
 
+    @media screen and (min-width: $mobile) {
+        margin-bottom: 32px;
+    }
+}
 
 .menu .current {
     color: $accent-color;
@@ -50,14 +51,25 @@
 
 .menu-position__wrapper {
     margin-top: 25vh;
+
+    @media screen and (min-width: $mobile) {
+        margin-top: 306px;
+    }
 }
 
+.menu-contacts {
+    margin-bottom: 8vh;
+
+    @media screen and (min-width: $mobile) {
+        margin-bottom: 64px;
+    }
+}
 .menu-contacts__item:first-child {
     margin-bottom: 3vh;
-}
 
-.menu-contacts__item:last-child {
-    margin-bottom: 8vh;
+    @media screen and (min-width: $mobile) {
+        margin-bottom: 32px;
+    }
 }
 
 .menu-contacts__link {

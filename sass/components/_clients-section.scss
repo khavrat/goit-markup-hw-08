@@ -13,7 +13,17 @@
 .client__list {
     @include centeredFlex();
     flex-wrap: wrap;
-    gap: 30px;
+
+    @media screen and (min-width: 450px) {
+        gap: 30px;
+    }
+}
+
+.client__logo:not(:last-child) {
+    
+    @media screen and (max-width: 449px) {
+        margin-bottom: 30px;
+    }
 }
 
 .client__icon {
@@ -38,3 +48,4 @@
         width: 170px;
     }
 }
+

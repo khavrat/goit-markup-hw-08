@@ -20,7 +20,7 @@
     overflow: hidden;
 }
 
-.feature__item {
+.feature__item:not(:last-child) {
     margin-bottom: 30px;
 }
 
