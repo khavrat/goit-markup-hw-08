@@ -83,7 +83,11 @@
 
 .form__group {
     margin-bottom: 65px;
-    min-width: 300px;
+    min-width: 220px;
+
+    @media screen and (min-width: $mobile) {
+        min-width: 300px;
+    }
 }
 
 .form__title {

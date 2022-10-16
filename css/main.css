@@ -594,7 +594,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 40px;
-  gap: 4px;
+  gap: 8px;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -1401,7 +1401,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 40px;
-  gap: 4px;
+  gap: 8px;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -1485,7 +1485,12 @@ button {
 
 .form__group {
   margin-bottom: 65px;
-  min-width: 300px;
+  min-width: 220px;
+}
+@media screen and (min-width: 480px) {
+  .form__group {
+    min-width: 300px;
+  }
 }
 
 .form__title {
@@ -1617,7 +1622,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 40px;
+  padding: 40px 20px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1632,7 +1637,18 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
   transition-property: transform, opacity, visibility;
   transition-property: transform, opacity, visibility, -webkit-transform;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
+  .modal {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .modal {
+    width: 270px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
     width: 416px;
     height: 609px;
@@ -1886,7 +1902,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 40px;
-  gap: 4px;
+  gap: 8px;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -1970,7 +1986,12 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 
 .form__group {
   margin-bottom: 65px;
-  min-width: 300px;
+  min-width: 220px;
+}
+@media screen and (min-width: 480px) {
+  .form__group {
+    min-width: 300px;
+  }
 }
 
 .form__title {
@@ -2087,22 +2108,38 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 
 .checkbox__label {
   position: absolute;
-  top: 455px;
+  top: 475px;
   left: 30px;
-  width: 370px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 200px;
   font-size: 11px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 320px) {
+  .checkbox__label {
+    top: 455px;
+    width: 220px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .checkbox__label {
+    text-align: right;
+  }
+}
+@media screen and (min-width: 480px) {
+  .checkbox__label {
+    width: 370px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .checkbox__label {
@@ -2145,37 +2182,42 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
+  top: -2px;
+  left: -2px;
   width: 16px;
   height: 15px;
   border-radius: 2px;
   background-color: #2196F3;
   background-size: cover;
 }
-@media screen and (max-width: 1199px) {
-  .checkbox__icon svg {
-    top: -2px;
-    left: 18px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .checkbox__icon svg {
-    top: 3px;
-    left: 16px;
-  }
-}
 .checkbox:checked + .checkbox__icon svg {
   visibility: visible;
 }
 
 .checkbox__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
   background-color: #FFFFFF;
-  margin-top: -2px;
-  margin-left: -13px;
   margin-right: 7px;
+  margin-left: -11px;
+}
+@media screen and (min-width: 480px) {
+  .checkbox__icon {
+    margin-top: -2px;
+    margin-left: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__icon {
+    margin-top: 3px;
+    margin-left: 13px;
+  }
 }
 .checkbox:focus + .checkbox__icon {
   outline: 2px solid #2196F3;
@@ -2256,7 +2298,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 40px;
-  gap: 4px;
+  gap: 8px;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;

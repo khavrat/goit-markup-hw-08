@@ -5,14 +5,27 @@
 
 .checkbox__label {
     position: absolute;
-    top: 455px;
+    top: 475px;
     left: 30px;
-    width: 370px;
-    @include centeredFlex($type: inline-flex);
+    width: 200px;
     font-size: $font-size-xxxs;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: $secondary-text-color;
+
+    @media screen and (min-width: 320px) {
+        top: 455px;
+        width: 220px;
+    }
+
+    @media screen and (max-width: $premobile) {
+        text-align: right; 
+    }
+   
+    @media screen and (min-width: $mobile) {
+       width: 370px;
+       @include centeredFlex($type: inline-flex); 
+    }
 
     @media screen and (min-width: $desktop) {
         font-size: $font-size-xs;
@@ -29,7 +42,7 @@
     color: $accent-color;
 
     @media screen and (max-width: $predesktop) {
-        font-size: 11px;
+        font-size: $font-size-xxxs;
         line-height: 1.17;
     }
 
@@ -43,21 +56,13 @@
     visibility: hidden;
     @include centeredFlex();
     position: absolute;
+    top: -2px;
+    left: -2px;
     width: 16px;
     height: 15px;
     border-radius: 2px;
     background-color: $accent-color;
     background-size: cover;
-
-    @media screen and (max-width: $predesktop) {
-        top: -2px;
-        left: 18px;
-    }
-
-    @media screen and (min-width: $desktop) {
-        top: 3px;
-        left: 16px;
-    }
 
     .checkbox:checked + & {
         visibility: visible;
@@ -65,15 +70,28 @@
 }
 
 .checkbox__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
     width: 16px;
     height: 15px;
     border: 2px solid $prymary-text-color;
     border-radius: 2px;
     background-color: $primary-bg-color;
-    margin-top: -2px;
-    margin-left: -13px;
     margin-right: 7px;
+    margin-left: -11px;
 
+    @media screen and (min-width: $mobile) {
+        margin-top: -2px;
+        margin-left: 15px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 3px;
+        margin-left: 13px;
+    }
+    
     .checkbox:focus + & {
         outline: 2px solid $accent-color;
     }
