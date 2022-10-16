@@ -54,11 +54,11 @@
 .project__filter {
     @include centeredFlex();
     margin-bottom: 40px;
-    gap: 8px;
+    gap: 4px;
     justify-content: left;
     flex-wrap: wrap;
 
-    @media screen and (max-width: $pre-mobile) {
+    @media screen and (max-width: $premobile) {
         width: 250px;
     }
 
