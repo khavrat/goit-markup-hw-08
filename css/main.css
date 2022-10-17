@@ -315,6 +315,7 @@ button {
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: scroll;
   width: 100vw;
   height: 100vh;
   padding: 48px 0 48px 40px;
@@ -1517,7 +1518,6 @@ button {
 .form__modal {
   text-align: center;
   width: 100%;
-  z-index: 10;
 }
 
 .form__group {
@@ -1664,6 +1664,8 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 100;
+  overflow-y: scroll;
   padding: 40px 20px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1687,7 +1689,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .modal {
     width: 270px;
-    height: auto;
+    height: 616px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
@@ -2024,7 +2026,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 .form__modal {
   text-align: center;
   width: 100%;
-  z-index: 10;
 }
 
 .form__group {
@@ -2170,7 +2171,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 }
 @media screen and (min-width: 320px) {
   .checkbox__label {
-    width: 220px;
+    width: 226px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 1199px) {
@@ -2180,7 +2181,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 }
 @media screen and (min-width: 480px) {
   .checkbox__label {
-    width: 320px;
+    width: 330px;
   }
 }
 @media screen and (min-width: 1200px) {
