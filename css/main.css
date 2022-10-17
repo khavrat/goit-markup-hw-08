@@ -473,10 +473,6 @@ button {
   }
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 .section.section--hero {
   padding: 118px 0;
   text-align: center;
