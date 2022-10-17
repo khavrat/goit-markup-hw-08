@@ -129,7 +129,7 @@ button {
   font-family: "Raleway", sens-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.19;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #000000;
 }
@@ -150,6 +150,7 @@ button {
 @media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -261,13 +262,35 @@ button {
     margin-left: auto;
   }
 }
+
 .contacts__icon {
   color: currentColor;
   vertical-align: middle;
   margin-right: 10px;
 }
+.contacts__icon--mail {
+  width: 14px;
+  height: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon--mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+.contacts__icon--phone {
+  width: 10px;
+  height: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon--phone {
+    height: 16px;
+  }
+}
 
 .contacts__link {
+  font-size: 12px;
+  line-height: 1.17;
   padding: 5px 0;
   fill: #757575;
   color: #757575;
@@ -283,6 +306,8 @@ button {
 @media screen and (min-width: 1200px) {
   .contacts__link {
     padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -761,6 +786,12 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #212121;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .feature__naming {
+    text-align: left;
+  }
 }
 
 .feature__discription {
@@ -886,7 +917,12 @@ button {
 }
 
 .team__wrapper {
-  padding: 30px 32px;
+  padding: 30px 32px 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team__wrapper {
+    padding: 30px 32px;
+  }
 }
 
 .team__name {
@@ -1481,10 +1517,11 @@ button {
 .form__modal {
   text-align: center;
   width: 100%;
+  z-index: 10;
 }
 
 .form__group {
-  margin-bottom: 65px;
+  margin-bottom: 20px;
   min-width: 220px;
 }
 @media screen and (min-width: 480px) {
@@ -1497,9 +1534,14 @@ button {
   display: inline-block;
   margin-bottom: 12px;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .form__title {
+    line-height: 1.15;
+  }
 }
 
 .form__marker {
@@ -1982,10 +2024,11 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 .form__modal {
   text-align: center;
   width: 100%;
+  z-index: 10;
 }
 
 .form__group {
-  margin-bottom: 65px;
+  margin-bottom: 20px;
   min-width: 220px;
 }
 @media screen and (min-width: 480px) {
@@ -1998,9 +2041,14 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
   display: inline-block;
   margin-bottom: 12px;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .form__title {
+    line-height: 1.15;
+  }
 }
 
 .form__marker {
@@ -2107,51 +2155,45 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 }
 
 .checkbox__label {
-  position: absolute;
-  top: 475px;
-  left: 30px;
+  display: inline-block;
   width: 200px;
+  margin-bottom: 30px;
   font-size: 11px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
 }
+@media screen and (max-width: 319px) {
+  .checkbox__label {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 320px) {
   .checkbox__label {
-    top: 455px;
     width: 220px;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 320px) and (max-width: 1199px) {
   .checkbox__label {
     text-align: right;
   }
 }
 @media screen and (min-width: 480px) {
   .checkbox__label {
-    width: 370px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 320px;
   }
 }
 @media screen and (min-width: 1200px) {
   .checkbox__label {
     font-size: 14px;
     line-height: 1.71;
-    top: 430px;
-    width: 448px;
+    width: 410px;
   }
 }
 
 .checkbox__link {
   display: inline-block;
+  margin-left: 4px;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2196,9 +2238,8 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 
 .checkbox__icon {
   position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
+  top: 498px;
+  left: 40px;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -2207,16 +2248,22 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
   margin-right: 7px;
   margin-left: -11px;
 }
+@media screen and (min-width: 320px) {
+  .checkbox__icon {
+    top: 467px;
+    left: 28px;
+  }
+}
 @media screen and (min-width: 480px) {
   .checkbox__icon {
-    margin-top: -2px;
-    margin-left: 15px;
+    top: 472px;
+    left: 54px;
   }
 }
 @media screen and (min-width: 1200px) {
   .checkbox__icon {
-    margin-top: 3px;
-    margin-left: 13px;
+    top: 435px;
+    left: 55px;
   }
 }
 .checkbox:focus + .checkbox__icon {

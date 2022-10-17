@@ -79,10 +79,11 @@
 .form__modal {
     text-align: center;
     width: 100%;
+    z-index: 10;
 }
 
 .form__group {
-    margin-bottom: 65px;
+    margin-bottom: 20px;
     min-width: 220px;
 
     @media screen and (min-width: $mobile) {
@@ -94,9 +95,13 @@
     display: inline-block;
     margin-bottom: 12px;
     font-size: $font-size-l;
-    line-height: 1.15;
+    line-height: 1.5;
     letter-spacing: 0.03em;
     color: $prymary-text-color;
+
+    @media screen and (min-width: $desktop) {
+        line-height: 1.15;
+    }
 }
 
 .form__marker {

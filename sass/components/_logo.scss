@@ -2,7 +2,7 @@
     font-family: $font-family-accent;
     font-weight: $font-weight-bold;
     font-size: $font-size-mobmail;
-    line-height: 1.19;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $logo-accent;
     
@@ -24,5 +24,6 @@
 
     @media screen and (min-width: $desktop) {
         font-size: $font-size-xl;
+        line-height: 1.19;
     }
 }

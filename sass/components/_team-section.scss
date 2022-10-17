@@ -55,7 +55,11 @@
 }
 
 .team__wrapper {
-    padding: 30px 32px;
+    padding: 30px 32px 24px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 30px 32px;
+    }
 }
 
 .team__name {

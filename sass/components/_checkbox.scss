@@ -4,39 +4,40 @@
 }
 
 .checkbox__label {
-    position: absolute;
-    top: 475px;
-    left: 30px;
+    display: inline-block;
     width: 200px;
+    margin-bottom: 30px;
     font-size: $font-size-xxxs;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: $secondary-text-color;
 
+    @media screen and (max-width: 319px) {
+        text-align: center; 
+    }
+
     @media screen and (min-width: 320px) {
-        top: 455px;
         width: 220px;
     }
 
-    @media screen and (max-width: $premobile) {
-        text-align: right; 
+    @media screen and (min-width: 320px) and (max-width: $predesktop) {
+        text-align: right;
     }
    
     @media screen and (min-width: $mobile) {
-       width: 370px;
-       @include centeredFlex($type: inline-flex); 
+       width: 320px;
     }
 
     @media screen and (min-width: $desktop) {
         font-size: $font-size-xs;
         line-height: 1.71; 
-        top: 430px;
-        width: 448px;
+        width: 410px;
     }
 }
 
 .checkbox__link {
     display: inline-block;
+    margin-left: 4px;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: $accent-color;
@@ -71,9 +72,8 @@
 
 .checkbox__icon {
     position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
+    top: 498px;
+    left: 40px;
     width: 16px;
     height: 15px;
     border: 2px solid $prymary-text-color;
@@ -82,14 +82,18 @@
     margin-right: 7px;
     margin-left: -11px;
 
+    @media screen and (min-width: 320px) {
+        top: 467px;
+        left: 28px;
+    }
     @media screen and (min-width: $mobile) {
-        margin-top: -2px;
-        margin-left: 15px;
+        top: 472px;
+        left: 54px;
     }
 
     @media screen and (min-width: $desktop) {
-        margin-top: 3px;
-        margin-left: 13px;
+        top: 435px;
+        left: 55px;
     }
     
     .checkbox:focus + & {
