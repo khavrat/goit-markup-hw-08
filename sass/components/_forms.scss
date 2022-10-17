@@ -1,4 +1,8 @@
 // Форма в футері
+.form__wrapper {
+    margin-top: 60px;   
+}
+
 .form {
     @media screen and (max-width: $predesktop) {
         max-width: 450px;
@@ -22,7 +26,6 @@
         color: $primary-bg-color;
 
         @media screen and (max-width: $predesktop) {
-            margin-top: 60px;
             text-align: center;
             max-width: 100%;
         }

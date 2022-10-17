@@ -80,7 +80,7 @@
 
 .project__img {
     width: 450px;
-    max-height: 294px;
+    height: 294px;
     
     @media screen and (min-width: $tablet) {
         width: 354px;
@@ -107,7 +107,14 @@
     border-right: 1px solid $border-line-portfolio;
     border-bottom: 1px solid $border-line-portfolio;
     border-left: 1px solid $border-line-portfolio;
+
 } 
+
+.project__item {
+    @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+}
 
 .project__item:first-child .project__wrapper {
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
@@ -121,10 +128,6 @@
     line-height: 2;
     letter-spacing: 0.06em;
     color: $prymary-text-color;
-
-    @media screen and (min-width: $tablet) and (max-width: $predesktop) {
-        width: 300px;
-    }
 }
 
 .project__type {

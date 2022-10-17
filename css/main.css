@@ -1107,7 +1107,7 @@ button {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .action {
     margin-top: 60px;
   }
@@ -1235,6 +1235,10 @@ button {
   background-color: #2196F3;
 }
 
+.form__wrapper {
+  margin-top: 60px;
+}
+
 @media screen and (max-width: 1199px) {
   .form {
     max-width: 450px;
@@ -1260,7 +1264,6 @@ button {
 }
 @media screen and (max-width: 1199px) {
   .form__label {
-    margin-top: 60px;
     text-align: center;
     max-width: 100%;
   }
@@ -1694,7 +1697,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
-    width: 416px;
+    width: 450px;
     height: 609px;
   }
 }
@@ -1743,6 +1746,10 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
   overflow: hidden;
 }
 
+.form__wrapper {
+  margin-top: 60px;
+}
+
 @media screen and (max-width: 1199px) {
   .form {
     max-width: 450px;
@@ -1768,7 +1775,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 }
 @media screen and (max-width: 1199px) {
   .form__label {
-    margin-top: 60px;
     text-align: center;
     max-width: 100%;
   }
@@ -2159,7 +2165,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
   display: inline-block;
   width: 200px;
   margin-bottom: 30px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
@@ -2181,7 +2187,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 }
 @media screen and (min-width: 480px) {
   .checkbox__label {
-    width: 330px;
+    width: 340px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2202,7 +2208,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 }
 @media screen and (max-width: 1199px) {
   .checkbox__link {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.17;
   }
 }
@@ -2239,8 +2245,8 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 
 .checkbox__icon {
   position: absolute;
-  top: 498px;
-  left: 40px;
+  top: 500px;
+  left: 34px;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -2251,8 +2257,8 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 }
 @media screen and (min-width: 320px) {
   .checkbox__icon {
-    top: 467px;
-    left: 28px;
+    top: 468px;
+    left: 50px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -2527,7 +2533,7 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 
 .project__img {
   width: 450px;
-  max-height: 294px;
+  height: 294px;
 }
 @media screen and (min-width: 768px) {
   .project__img {
@@ -2561,6 +2567,13 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
   border-left: 1px solid #EEEEEE;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .project__item:first-child .project__wrapper {
     height: 146px;
@@ -2573,11 +2586,6 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .project__name {
-    width: 300px;
-  }
 }
 
 .project__type {
